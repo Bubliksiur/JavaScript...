@@ -1,0 +1,15 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+#kwadrat {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    cursor: pointer;
+}
