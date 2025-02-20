@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: bisque;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #5a5a5a;
+        }
+
+        form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        input {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            width: 200px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: green;
+            outline: none;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(1, 179, 1);
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: 5a5a5a;
+            font-weight: bold;
+            text-decoration: underline green;
+        }
+    </style>
+</head>
+
+<body>
+    </head>
+
+    <body>
+        <h1>Square of numbers</h1>
+        <form id="gradeForm">
+            <label><input placeholder="Type number" id="num" type="text"></label><br>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        <p id="message">.</p>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
