@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #232323;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3vh;
+}
+
+section {
+    width: 80vw;
+    height: 85vh;
+    background-color: #6e6e6e;
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    /* Ustawienie kolumny */
+    overflow: auto;
+    /* Dodanie przewijania */
+    padding: 10px;
+    /* Dodanie paddingu */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+form input {
+    width: 45vw;
+    height: 3vh;
+    padding: 0.5vh 1vw 0.5vh 1vw;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+    margin: 10px;
+}
+
+form button {
+    padding: 1.1vh 3vw 1.1vh 3vw;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+span {
+    margin: 10px 0;
+    /* Dodanie marginesu do span */
+    padding: 20px 25px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+p {
+    margin-top: 35px;
+    color: red;
+    font-weight: bold;
+}
+
+span button {
+    margin-left: 15px;
+    background-color: rgb(167, 167, 167);
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+span button:hover {
+    background-color: rgb(116, 116, 116);
+}
+
+span button:active {
+    background-color: rgb(77, 77, 77);
+}

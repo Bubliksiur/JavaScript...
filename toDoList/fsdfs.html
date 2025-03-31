@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #232323;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3vh;
+        }
+
+        section {
+            width: 80vw;
+            height: 85vh;
+            background-color: #6e6e6e;
+            border-radius: 10px;
+            margin: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        form input {
+            width: 45vw;
+            height: 3vh;
+            padding: 0.5vh 1vw 0.5vh 1vw;
+            border-radius: 10px;
+            border: none;
+            background-color: #ffffff;
+            margin: 10px;
+        }
+
+        form button {
+            padding: 1.1vh 3vw 1.1vh 3vw;
+            border-radius: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        span {
+            margin: 20px;
+            padding: 20px 25px;
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        p {
+            margin-top: 35px;
+            color: red;
+            font-weight: bold;
+        }
+
+        span button {
+            margin-left: 15px;
+            background-color: rgb(167, 167, 167);
+            padding: 5px 10px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        span button:hover {
+            background-color: rgb(116, 116, 116);
+        }
+
+        span button:active {
+            background-color: rgb(77, 77, 77);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to To-do list!</h1>
+    <p></p>
+    <form>
+        <input type="text" placeholder="Type something">
+        <button type="button">Add</button>
+    </form>
+
+    <div class="container">
+        <section>
+
+        </section>
+    </div>
+
+    <script>
+        const section = document.querySelector('section');
+        const ul = document.querySelector('ul');
+        const button = document.querySelector('button');
+        const input = document.querySelector('input');
+        const warning = document.querySelector('p');
+
+        button.addEventListener('click', (e) => {
+            if (input.value == '') {
+                warning.textContent = "Don't leave blank fields!";
+                e.preventdefault();
+            } else {
+                warning.textContent = "";
+
+                let span = document.createElement('span');
+                section.appendChild(span);
+                span.textContent = `${input.value}`;
+
+                let delbtn = document.createElement('button');
+                span.appendChild(delbtn);
+                delbtn.textContent = "X";
+
+                delbtn.addEventListener('click', () => {
+                    span.style.display = 'none';
+                })
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
