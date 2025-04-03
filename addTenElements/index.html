@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+
+	<script>
+		let size = 10;
+		let orderElement = 1;
+		let fontSize = 10;
+
+		const init = () => {
+			// create button
+			const btn = document.createElement('button');
+			btn.textContent = 'dodaj 10 elementow do listy';
+			document.body.appendChild(btn);
+
+			// create listy
+			const ulList = document.createElement('ul');
+			document.body.appendChild(ulList);
+
+			btn.addEventListener('click', createElements);
+		}
+
+		const createElements = () => {
+
+			for (let i = orderElement; i <= size; i++) {
+				const ul = document.querySelector('ul');
+				const liItem = document.createElement('li');
+				liItem.textContent = `element ${i}`;
+				liItem.style.fontSize = `${fontSize}px`;
+				ul.appendChild(liItem);
+				orderElement++;
+				fontSize++;
+			}
+			size += 10;
+		}
+
+		init();
+
+	</script>
+</body>
+
+</html>
