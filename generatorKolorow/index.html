@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random color</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: antiquewhite;
+            font-family: sans-serif;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 5px 25px 5px 25px;
+            cursor: pointer;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-10px);
+        }
+
+        button:active {
+            padding: 10px 35px 10px 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div></div>
+    </main>
+
+    <button type="button" id="drawColor">Draw color</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
