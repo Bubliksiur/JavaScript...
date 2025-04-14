@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+button {
+    padding: 10px 65px 10px 65px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-10px);
+    background-color: rgb(254, 255, 166);
+}
+
+ul li {
+    color: black;
+}
+
+#firsQuest {
+    display: none;
+}
+
+#firsQuest h3 {
+    text-align: center;
+}
+
+#firsQuest ul li {
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid black;
+    margin: 5px;
+    width: 35vw;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#firsQuest ul li:hover {
+    background-color: darkcyan;
+}
+
+.btn {
+    text-align: center;
+}
