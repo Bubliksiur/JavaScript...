@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+</head>
+
+<body>
+    <form id="gradeForm">
+        <input type="number" id="input" placeholder="Enter an integer (n)">
+        <button type="button" id="submit">Calculate</button>
+        <div id="message"></div>
+    </form>
+
+    <script>
+        const submit = document.getElementById('submit');
+        const message = document.getElementById('message');
+
+        submit.addEventListener('click', () => {
+            const n = parseInt(document.getElementById('input').value);
+            if (isNaN(n) || n < 2) {
+                message.textContent = 'Please enter an integer greater than or equal to 2.';
+                return;
+            }
+
+            let primes = [];
+            for (let i = 2; i <= n; i++) {
+                let isPrime = true;
+
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    primes.push(i);
+                }
+            }
+
+            message.textContent = 'Prime numbers from 2 to ' + n + ' are: ' + primes.join(', ');
+
+            document.getElementById('gradeForm').reset();
+        });
+    </script>
+</body>
+
+</html>
